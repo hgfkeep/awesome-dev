@@ -13,6 +13,7 @@ brew install pyenv pyenv-virtualenv
 
 然后选择安装的版本信息：`pyenv install 3.7.0`
 
+> 如果使用`pyenv install 3.7.0` 安装出现问题，使用brew 安装。pyenv不能解决以来库的问题。
 
 ## 使用pyenv-virtualenv管理virtualenv 环境
 
