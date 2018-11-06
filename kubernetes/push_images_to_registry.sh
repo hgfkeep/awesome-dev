@@ -2,6 +2,7 @@
 registry=$1
 if [ -z $registry ]; then
   echo "please input registry address as parameter! like 'core.harbor.domain/example'"
+  exit
 fi
 images=`docker images --format "{{.Repository}}:{{.Tag}}"`
 for image in ${images[@]} ; do
