@@ -40,6 +40,6 @@
 1. [gitlab代码仓库](./service/gitlab/start_gitlab.sh)
 2. [部署harbor容器仓库](./service/harbor.md)
 3. [aria2+webUI实现离线下载服务](./service/offline_downloader.md)
-
+4. [VPN服务](./service/vpn)
 
 
