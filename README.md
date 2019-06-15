@@ -11,10 +11,10 @@
 
 ### 核心依赖
 
-1. kafka
-2. mysql
-3. redis
-4. zookeeper
+1. kafka：[一键部署脚本](./common/mysql/start_kafka.sh)
+2. mysql：[一键部署脚本](./common/mysql/start_mysql.sh)
+3. redis：[一键部署脚本](./common/mysql/start_redis.sh)
+4. zookeeper：[一键部署脚本](./common/mysql/start_zookeeper.sh)
 
 
 ## IDEA的Editor配置
@@ -22,16 +22,24 @@
 
 ## iterms color配置
 
+* Dracula.itermcolors
+* Snazzy.itermcolors
+* material-design-colors.itermcolors
 
 ## kubernetes有用的脚本
 
+* [批量推送镜像到dockerhub](./kubernetes/push_images_to_registry.sh)
 
 ## ohmyzsh调教
 
+* 高亮插件
+* 根据历史输入自动提示
+
 ## 服务部署
 
-1. gitlab
-2. harbor
+1. [gitlab代码仓库](./service/gitlab/start_gitlab.sh)
+2. [部署harbor容器仓库](./service/harbor.md)
+3. [aria2+webUI实现离线下载服务](./service/offline_downloader.md)
 
 
 
