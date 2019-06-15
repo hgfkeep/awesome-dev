@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+    container_name: zookeeper
+  kafka:
+    image: wurstmeister/kafka
+    ports:
+      - "9092:9092"
+    volumes:
+      - /etc/localtime:/etc/localtime  # docker和主机time一致
+    environment:
+      # 需要外网访问，修改localhost为IP
+      KAFKA_ADVERTISED_HOST_NAME: 10.61.1.36
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      # KAFKA_BROKER_ID: 1
+      # KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      # KAFKA_CREATE_TOPICS: "stream-in:1:1,stream-out:1:1"
+    container_name: kafka
+  kafka-manager:
+    image: sheepkiller/kafka-manager
+    ports:
+      - "9000:9000"
+    environment:
+      # zookeeper所在主机
+      ZK_HOSTS: 10.61.1.36:2181
+    container_name: kafka-manager
