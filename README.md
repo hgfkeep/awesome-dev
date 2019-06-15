@@ -11,10 +11,10 @@
 
 ### 核心依赖
 
-1. kafka：[一键部署脚本](./common/mysql/start_kafka.sh)
-2. mysql：[一键部署脚本](./common/mysql/start_mysql.sh)
-3. redis：[一键部署脚本](./common/mysql/start_redis.sh)
-4. zookeeper：[一键部署脚本](./common/mysql/start_zookeeper.sh)
+1. kafka：[一键运行脚本](./common/mysql/start_kafka.sh)
+2. mysql：[一键运行脚本](./common/mysql/start_mysql.sh)
+3. redis：[一键运行脚本](./common/mysql/start_redis.sh)
+4. zookeeper：[一键运行脚本](./common/mysql/start_zookeeper.sh)
 
 
 ## IDEA的Editor配置
