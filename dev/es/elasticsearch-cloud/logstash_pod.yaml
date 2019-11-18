@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: logstash
+  namespace: elastic-system
+spec:
+  affinity:
+   nodeAffinity:
+     requiredDuringSchedulingIgnoredDuringExecution:
+       nodeSelectorTerms:
+       - matchExpressions:
+         - key: kubernetes.io/hostname
+           operator: In
+           values:
+           - ict94 
+  containers:
+  - name: logstash
+    image: docker.elastic.co/logstash/logstash:7.4.2
+    command:
+    - sleep
+    - "3600"
+    volumeMounts:
+    - name: data
+      mountPath: /data
+  volumes:
+  - name: data
+    hostPath:
+      path: /opt
+      type: Directory
