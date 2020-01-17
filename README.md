@@ -1,6 +1,6 @@
 # awesome development environment configuration
 
-## 开发时依赖的系统
+## 开发时依赖环境
 
 依赖的系统均适用docker运行：
 
@@ -11,10 +11,13 @@
 
 ### 核心依赖
 
-1. kafka：[一键运行脚本](./common/mysql/start_kafka.sh)
-2. mysql：[一键运行脚本](./common/mysql/start_mysql.sh)
-3. redis：[一键运行脚本](./common/mysql/start_redis.sh)
-4. zookeeper：[一键运行脚本](./common/mysql/start_zookeeper.sh)
+1. kafka：[一键运行脚本](./dev/kafka/start_kafka.sh)
+2. mysql：[一键运行脚本](./dev/mysql/start_mysql.sh)
+3. redis：[一键运行脚本](./dev/redis/start_redis.sh)
+4. zookeeper：[一键运行脚本](./dev/zookeeper/start_zookeeper.sh)
+5. es: [docker-compose](./dev/es/docker-compose.yml)
+6. rust-jupyter: [docker-compose](./dev/rust/docker-compose.yml)
+7. mongo: [一键运行脚本](./dev/mongo/start_mongo.sh)
 
 
 ## IDEA的Editor配置
