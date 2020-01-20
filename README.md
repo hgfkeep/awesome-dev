@@ -16,7 +16,7 @@
 3. redis：[一键运行脚本](./dev/redis/start_redis.sh)
 4. zookeeper：[一键运行脚本](./dev/zookeeper/start_zookeeper.sh)
 5. es: [docker-compose](./dev/es/docker-compose.yml)
-6. rust-jupyter: [docker-compose](./dev/rust/docker-compose.yml)
+6. rust-jupyter: [docker-compose](./dev/rust/docker-compose.yml) (详细情况参考：![docker-rust-jupyter](https://github.com/hgfkeep/rust-jupyter))
 7. mongo: [一键运行脚本](./dev/mongo/start_mongo.sh)
 
 
