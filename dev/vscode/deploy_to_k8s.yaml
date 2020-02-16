@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: codespace
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: code-server
+  namespace: codespace
+  labels:
+    env: dev
+    app: code-server
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: code-server
+  template:
+    metadata:
+      namespace: codespace
+      name: code-server
+      labels:
+        app: code-server
+        env: dev
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values: 
+                - ict94
+      containers:
+      - name: code-server
+        image: codercom/code-server
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PASSWORD
+          value: "hgfgood"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: code-server
+  namespace: codespace
+spec:
+  type: NodePort
+  selector:
+    app: code-server
+  ports:
+  - targetPort: 8080
+    port: 8080
+    nodePort: 30008
+
