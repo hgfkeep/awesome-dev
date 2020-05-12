@@ -11,7 +11,6 @@ alias gp="git push"
 alias gs="git status"
 alias gl="git log"
 
-
 function gcap() {
     git add . && git commit -m "$*" && git push
 }
