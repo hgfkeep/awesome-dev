@@ -5,3 +5,5 @@
 * 友好+高亮的ls：exa
 * [友好文件查找工具:fd](./fd.md)
 * [强大的日志查看工具:lnav](./lnav.md)
+* [git alias + emoji commit](./git.md)
+* [快速文件跳转](./pm.md)
