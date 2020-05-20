@@ -1,5 +1,9 @@
 # oh my zsh
 
+
+## 安装
+
+安装命令；`sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 配置文件的位置`~/.zshrc`
 
 ## 主题
