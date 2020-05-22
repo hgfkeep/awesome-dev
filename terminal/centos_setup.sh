@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Donot run this as root! may be with a user has sudo privileges"
+
+sudo yum update
+sudo yum install -y  git file gcc cmake perl
+
+echo "================== install brew for linux ============================"
+# prepare for non root user
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+brew install jq exa httpie lrzsz minio-mc fzf fd lnav
