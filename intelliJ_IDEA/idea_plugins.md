@@ -23,6 +23,7 @@
 2. RegexPlugin
 3. Translation
 4. .ignore
+5. Lombok
 
 ## Java Tools
 
